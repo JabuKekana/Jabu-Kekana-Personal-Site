@@ -1,0 +1,144 @@
+/*==================== PORTFOLIO ====================*/
+.portfolio__container {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 3rem;
+}
+
+.portfolio__container.swiper-container {
+  overflow: visible;
+}
+
+.portfolio__content {
+  padding: 0 2.75rem;
+}
+
+.portfolio__img {
+  width: 265px;
+  height: 180px;
+  border-radius: 0.5rem;
+  justify-self: center;
+  object-fit: cover;
+}
+
+.portfolio__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.sub__title {
+  font-size: 12px;
+  margin-bottom: var(--mb-0-5);
+}
+
+.portfolio__description {
+  margin-bottom: var(--mb-0-75);
+}
+
+.portfolio__button:hover .button__icon {
+  transform: translateX(0.25rem);
+}
+
+.swiper-portfolio-icon {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.portfolio__arrow {
+  position: absolute;
+  top: calc(50% - 1.5rem);
+  z-index: 10;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: translateY(-50%);
+  color: var(--first-color);
+}
+
+.portfolio__arrow--prev {
+  left: 0.25rem;
+}
+
+.portfolio__arrow--next {
+  right: 0.25rem;
+}
+
+.portfolio__container .swiper-pagination {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio__container .swiper-pagination-bullet-active {
+  background-color: var(--first-color);
+}
+
+.portfolio__arrow,
+.swiper-pagination-bullet {
+  outline: none;
+}
+
+.portfolio__container .swiper-pagination-bullet {
+  display: inline-block !important;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--first-color);
+  cursor: pointer;
+  margin: 0;
+  opacity: 0.25;
+}
+
+.portfolio__container .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+@media screen and (min-width: 568px) {
+  .portfolio__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__img {
+    width: 420px;
+    height: 280px;
+  }
+
+  .portfolio__content {
+    align-items: center;
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .portfolio__content {
+    column-gap: 6rem;
+    padding: 0 5rem;
+  }
+
+  .swiper-portfolio-icon {
+    font-size: 3.5rem;
+  }
+
+  .portfolio__arrow--prev {
+    left: -0.75rem;
+  }
+
+  .portfolio__arrow--next {
+    right: -0.75rem;
+  }
+
+  .portfolio__container .swiper-pagination {
+    bottom: 0;
+  }
+}
