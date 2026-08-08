@@ -5,9 +5,16 @@ import "./styles/testimonials.css";
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const testimonial = testimonials[activeIndex];
+  const testimonialRatings = [4, 4, 4.5, 5];
+  const rating = testimonialRatings[activeIndex] || 5;
 
   const previous = () => setActiveIndex((index) => (index === 0 ? testimonials.length - 1 : index - 1));
   const next = () => setActiveIndex((index) => (index === testimonials.length - 1 ? 0 : index + 1));
+  const starType = (star) => {
+    if (rating >= star) return "full";
+    if (rating >= star - 0.5) return "half";
+    return "empty";
+  };
 
   return (
     <section className="testimonial section">
@@ -25,9 +32,11 @@ export default function Testimonials() {
                   <span className="testimonial__client">{testimonial.title}</span>
                 </div>
               </div>
-              <div>
+              <div className="testimonial__stars" aria-label={`${rating} out of 5 stars`}>
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <i className="uil uil-star testimonial__icon-star" key={star}></i>
+                  <span className={`testimonial__icon-star testimonial__icon-star--${starType(star)}`} key={star}>
+                    {starType(star) === "half" ? "★" : "★"}
+                  </span>
                 ))}
               </div>
             </div>

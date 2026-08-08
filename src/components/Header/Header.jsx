@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { contact } from "../../data/siteData";
+import logoImage from "../../../packages/images/logo-image.png";
 import "./styles/header.css";
 
 export default function Header({ darkTheme, setDarkTheme }) {
@@ -9,7 +9,8 @@ export default function Header({ darkTheme, setDarkTheme }) {
     <header className="header" id="header">
       <nav className="nav container">
         <a href="#home" className="nav__logo" onClick={() => setMenuOpen(false)}>
-          Jabu Kekana
+          <img src={logoImage} alt="Jabu Kekana logo" className="nav__logo-img" />
+          <span>Jabu Kekana</span>
         </a>
         <div className={`nav__menu ${menuOpen ? "show-menu" : ""}`} id="nav-menu">
           <ul className="nav__list grid">

@@ -44,6 +44,18 @@
   color: var(--first-color);
 }
 
+.nav__logo {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
+.nav__logo-img {
+  display: block;
+  height: 1.65rem;
+  width: auto;
+}
+
 .nav__toggle {
   font-size: 1.1rem;
   cursor: pointer;

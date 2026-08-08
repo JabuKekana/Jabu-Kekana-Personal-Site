@@ -17,7 +17,25 @@
   margin-bottom: var(--mb-0-25);
 }
 
+.footer__brand {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: var(--mb-0-25);
+}
+
+.footer__brand .footer__title {
+  margin-bottom: 0;
+}
+
+.footer__logo-img {
+  display: block;
+  height: 2.5rem;
+  width: auto;
+}
+
 .footer__subtitle {
+  display: block;
   font-size: var(--small-font-size);
 }
 

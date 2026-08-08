@@ -30,8 +30,28 @@
   margin-bottom: var(--mb-2-5);
 }
 
+.testimonial__stars {
+  display: inline-flex;
+  gap: 0.15rem;
+}
+
 .testimonial__icon-star {
   color: var(--first-color);
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.testimonial__icon-star--empty {
+  color: var(--scroll-thumb-color);
+  opacity: 0.55;
+}
+
+.testimonial__icon-star--half {
+  background: linear-gradient(90deg, var(--first-color) 50%, var(--scroll-thumb-color) 50%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .testimonial__controls {

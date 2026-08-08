@@ -133,12 +133,16 @@ body:not(.dark-theme) .services__modal-icon {
 
 @media screen and (max-width: 380px) {
   .services__container {
-    grid-template-columns: max-content;
-    justify-content: center;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .services__content {
-    padding-right: 3.5rem;
+    min-width: 0;
+    padding: 3rem 1rem 1.25rem;
+  }
+
+  .services__title {
+    overflow-wrap: anywhere;
   }
 
   .services__modal {

@@ -18,7 +18,8 @@
   height: 180px;
   border-radius: 0.5rem;
   justify-self: center;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: var(--container-color);
 }
 
 .portfolio__title {

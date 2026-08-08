@@ -61,10 +61,10 @@ export default function Stories() {
         <div className="articles-gallery__controls">
           <button type="button" className="button button--flex button--small" onClick={previous}>
             <i className="uil uil-angle-left-b button__icon articles-gallery__button-icon-left"></i>
-            Previous
+            
           </button>
           <button type="button" className="button button--flex button--small" onClick={next}>
-            Next<i className="uil uil-angle-right-b button__icon"></i>
+           <i className="uil uil-angle-right-b button__icon"></i>
           </button>
         </div>
       </div>

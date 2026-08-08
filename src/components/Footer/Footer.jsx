@@ -1,4 +1,5 @@
 import { contact } from "../../data/siteData";
+import logoImage from "../../../packages/images/logo-image.png";
 import "./styles/footer.css";
 
 export default function Footer() {
@@ -7,7 +8,10 @@ export default function Footer() {
       <div className="footer__bg">
         <div className="footer__container container grid">
           <div>
-            <h1 className="footer__title">Jabu Kekana</h1>
+            <div className="footer__brand">
+              <img src={logoImage} alt="Jabu Kekana logo" className="footer__logo-img" />
+              <h1 className="footer__title">Jabu Kekana</h1>
+            </div>
             <span className="footer__subtitle">Software, AI & Digital Solutions</span>
           </div>
           <ul className="footer__links">
