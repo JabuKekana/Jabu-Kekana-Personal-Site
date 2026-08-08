@@ -11,11 +11,36 @@
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.20);
   transition: 0.3s;
-  background-image: url("../../../../packages/images/services-black-bg.jpg.jpg");
 }
 
 .services__content:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.services__content .skills__icon,
+.services__content .services__button,
+.services__content .services__button .button__icon {
+  color: #fff;
+}
+
+body:not(.dark-theme) .services__content {
+  background-color: var(--first-color-second);
+  background-image: none;
+}
+
+body.dark-theme .services__content {
+  background-color: #509cde;
+  background-image: none;
+}
+
+body.dark-theme .services__title {
+  color: #000;
+}
+
+body.dark-theme .services__content .skills__icon,
+body.dark-theme .services__content .services__button,
+body.dark-theme .services__content .services__button .button__icon {
+  color: #fff;
 }
 
 .services__icon {
@@ -64,6 +89,10 @@
   border-radius: 0.5rem;
 }
 
+body.dark-theme .services__modal-content {
+  background-color: #14141e;
+}
+
 .services__modal-services {
   row-gap: 1rem;
 }
@@ -83,13 +112,17 @@
   top: 1rem;
   right: 1rem;
   font-size: 1.5rem;
-  color: var(--first-color);
+  color: #fff;
   cursor: pointer;
 }
 
 .services__modal-icon {
   color: var(--first-color);
   margin-right: var(--mb-0-25);
+}
+
+body:not(.dark-theme) .services__modal-icon {
+  color: #fff;
 }
 
 /* Active Modal */
@@ -115,7 +148,7 @@
 
 @media screen and (min-width: 768px) {
   .services__container {
-    grid-template-columns: repeat(3, minmax(218px, 300px));
+    grid-template-columns: repeat(2, minmax(260px, 360px));
     justify-content: center;
   }
 
@@ -134,6 +167,6 @@
 
 @media screen and (min-width: 1024px) {
   .services__container {
-    grid-template-columns: repeat(3, minmax(238px, 320px));
+    grid-template-columns: repeat(3, minmax(260px, 340px));
   }
 }

@@ -34,8 +34,50 @@
   color: var(--first-color);
 }
 
+.testimonial__controls {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: var(--mb-1-5);
+}
+
+.testimonial__arrow {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  color: var(--first-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 2rem;
+  height: 2.5rem;
+  justify-content: center;
+  width: 2.5rem;
+}
+
+.testimonial__arrow:hover {
+  color: var(--first-color-alt);
+}
+
 .swiper-container .swiper-pagination-testimonial {
-  bottom: 0;
+  align-items: center;
+  bottom: initial;
+  display: flex !important;
+  gap: 0.5rem;
+  justify-content: center;
+  left: initial;
+  position: static !important;
+  transform: none;
+  width: auto !important;
+}
+
+.swiper-pagination-testimonial .swiper-pagination-bullet {
+  cursor: pointer;
+  margin: 0 !important;
+}
+
+.swiper-pagination-testimonial .swiper-pagination-bullet-active {
+  background-color: var(--first-color);
 }
 
 @media screen and (max-width: 380px) {

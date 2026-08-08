@@ -24,8 +24,11 @@ export default function Services() {
               View more<i className="uil uil-arrow-right button__icon"></i>
             </span>
 
-            <div className={`services__modal ${activeModal === index ? "active-modal" : ""}`}>
-              <div className="services__modal-content">
+            <div
+              className={`services__modal ${activeModal === index ? "active-modal" : ""}`}
+              onClick={() => setActiveModal(null)}
+            >
+              <div className="services__modal-content" onClick={(event) => event.stopPropagation()}>
                 <h4 className="services__modal-title">{service.modalTitle}</h4>
                 <i className="uil uil-times services__modal-close" onClick={() => setActiveModal(null)}></i>
                 <ul className="services__modal-services grid">

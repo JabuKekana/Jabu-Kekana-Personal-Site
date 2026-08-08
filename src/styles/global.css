@@ -12,7 +12,7 @@
 /* START OF LIGHT MODE COLORS - REVAMPED FUTURISTIC */
 /* START OF LIGHT MODE COLORS - WHITE & LIGHT BLUE GRADIENT */
   --first-color: #509cde;
-  --first-color-second: #0099ff;
+  --first-color-second: #509cde;
   --first-color-alt: #0099ff;
   --first-color-lighter: #66d9ff;
   --title-color: #1a1a2e;
@@ -75,7 +75,7 @@
 body.dark-theme {
   /* START OF DARK MODE COLORS - FUTURISTIC BLACK GRADIENT */
   --first-color: #509cde;
-  --first-color-second: #000000;
+  --first-color-second: #509cde;
   --first-color-alt: #0099ff;
   --first-color-lighter: #66d9ff;
   --title-color: #e8e8f0;
