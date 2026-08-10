@@ -7,22 +7,29 @@ export default function Contact() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
     setStatus("sending");
 
     try {
       const response = await fetch(contactScriptUrl, {
         method: "POST",
-        body: new FormData(event.currentTarget),
+        body: formData,
       });
 
-      if (!response.ok) throw new Error("Submission failed");
+      if (!response.ok && response.status !== 0 && response.type !== "opaque") {
+        throw new Error("Submission failed");
+      }
 
-      event.currentTarget.reset();
+      form.reset();
       setStatus("sent");
     } catch {
       setStatus("error");
     }
   }
+
+  const isSending = status === "sending";
 
   return (
     <section className="contact section" id="contact">
@@ -58,24 +65,24 @@ export default function Contact() {
           <div className="contact__inputs grid">
             <div className="contact__content">
               <label htmlFor="name" className="contact__label">Name</label>
-              <input type="text" name="Name" id="name" required className="contact__input" />
+              <input type="text" name="Name" id="name" required className="contact__input" disabled={isSending} />
             </div>
             <div className="contact__content">
               <label htmlFor="email" className="contact__label">E-mail</label>
-              <input type="email" name="Email" id="email" required className="contact__input" />
+              <input type="email" name="Email" id="email" required className="contact__input" disabled={isSending} />
             </div>
           </div>
           <div className="contact__content">
             <label htmlFor="subject" className="contact__label">Subject</label>
-            <input type="text" name="Subject" id="subject" className="contact__input" />
+            <input type="text" name="Subject" id="subject" className="contact__input" disabled={isSending} />
           </div>
           <div className="contact__content">
             <label htmlFor="description" className="contact__label">Message</label>
-            <textarea name="Message" id="description" rows="7" className="contact__input"></textarea>
+            <textarea name="Message" id="description" rows="7" className="contact__input" disabled={isSending}></textarea>
           </div>
           <div>
-            <button type="submit" id="submit" className="button button--flex" disabled={status === "sending"}>
-              {status === "sending" ? "Loading..." : "Submit"}
+            <button type="submit" id="submit" className="button button--flex" disabled={isSending}>
+              {isSending ? "Loading..." : "Submit"}
               <i className="uil uil-message button__icon"></i>
             </button>
           </div>

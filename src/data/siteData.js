@@ -1,8 +1,5 @@
 import heroPortrait from "../../packages/images/AdMaker_13042023_183626.png";
 import aboutPortrait from "../../packages/images/pras-2.png";
-import creativeSaImage from "../../packages/images/creative-sa-pic.png";
-import qoaImage from "../../packages/images/qoa-project.png";
-import botImage from "../../packages/images/botv2.png";
 import eLearningImage from "../../packages/images/E-Learning Management System.png";
 import qurtubiksMobileImage from "../../packages/images/Mobile App - Qurtubiks.png";
 import kaixenflowImage from "../../packages/images/Kaixenflow.png";
@@ -11,6 +8,9 @@ import maidportImage from "../../packages/images/Maidport.png";
 import meerathPublishersImage from "../../packages/images/Meerath Publishers.png";
 import capitalCommunityImage from "../../packages/images/The Capital Community.png";
 import qoaOpenDayImage from "../../packages/images/QOA Open Day App 2023.png";
+import articleOneImage from "../../packages/images/article-1.png";
+import articleTwoImage from "../../packages/images/article-2.png";
+import articleThreeImage from "../../packages/images/article-3.png";
 import arunImage from "../../packages/images/arun.jpg";
 import yugaImage from "../../packages/images/yuga.jpg";
 import shenanImage from "../../packages/images/shenan.png";
@@ -47,7 +47,7 @@ export const projects = [
     stack: "Mobile App Development > iOS > Android > Cross-Platform Data Sync",
     image: qurtubiksMobileImage,
     description:
-      "I developed a cross-platform mobile application to bring the Qurtuba Online Academy experience to iOS and Android devices. My main focus was ensuring that the mobile app felt as smooth and intuitive as the web version. I carefully integrated the mobile frontend with the existing databases and backend services to ensure that student data stayed perfectly synced across all devices. This project highlighted my skills in building unified experiences across different platforms.",
+      "I developed a cross-platform mobile application to bring the Qurtubiks experience to iOS and Android devices. My main focus was ensuring that the mobile app felt as smooth and intuitive as the web version. I carefully integrated the mobile frontend with the existing databases and backend services to ensure that all academic data stayed perfectly synced across all devices. This project highlighted my skills in building unified experiences across different platforms.",
   },
   {
     title: "Kaixenflow",
@@ -101,25 +101,25 @@ export const projects = [
 
 export const stories = [
   {
-    title: "Digital Presence Is Business Infrastructure",
-    stack: "Business > Technology > Entrepreneurship",
-    image: creativeSaImage,
-    description:
-      "A Medium story slot for thoughts on why modern entrepreneurs should treat websites, content and automated workflows as serious business assets.",
+    title: "Beyond the Tech Stack: Why the Industry You Code For Shapes Your Entire Career",
+    stack: "10 August 2026",
+    image: articleOneImage,
+    description: "By Jabu Kekana",
+    link: "https://medium.com/@jabukekana59/beyond-the-tech-stack-why-the-industry-you-code-for-shapes-your-entire-career-1637f35cf6f4?sharedUserId=jabukekana59",
   },
   {
-    title: "What AI Support Agents Mean For Small Teams",
-    stack: "AI > Support > Automation",
-    image: botImage,
-    description:
-      "A Medium story slot for practical lessons on how AI assistants can reduce repetitive support work while keeping human escalation available.",
+    title: "4 Books to Read Before You Start Building: Practical Lessons Most Founders Miss",
+    stack: "10 August 2026",
+    image: articleTwoImage,
+    description: "By Jabu Kekana",
+    link: "https://medium.com/@jabukekana59/4-books-to-read-before-you-start-building-practical-lessons-most-founders-miss-8660cb1789a7?sharedUserId=jabukekana59",
   },
   {
-    title: "From Idea To Usable Web Product",
-    stack: "Software Development > Product Thinking",
-    image: qoaImage,
-    description:
-      "A Medium story slot for explaining how raw business ideas become responsive web applications and measurable digital systems.",
+    title: "The Real Toll of Software Engineering and How to Stay Human in a 24/7 Industry",
+    stack: "11 August 2026",
+    image: articleThreeImage,
+    description: "By Jabu Kekana",
+    link: "https://medium.com/@jabukekana59/beyond-the-tech-stack-why-the-industry-you-code-for-shapes-your-entire-career-1637f35cf6f4?sharedUserId=jabukekana59",
   },
 ];
 
