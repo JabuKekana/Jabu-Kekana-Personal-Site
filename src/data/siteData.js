@@ -119,7 +119,7 @@ export const stories = [
     stack: "11 August 2026",
     image: articleThreeImage,
     description: "By Jabu Kekana",
-    link: "https://medium.com/@jabukekana59/beyond-the-tech-stack-why-the-industry-you-code-for-shapes-your-entire-career-1637f35cf6f4?sharedUserId=jabukekana59",
+    link: "https://medium.com/@jabukekana59/the-real-toll-of-software-engineering-and-how-to-stay-human-in-a-24-7-industry-4582a5c98276?sharedUserId=jabukekana59",
   },
 ];
 
