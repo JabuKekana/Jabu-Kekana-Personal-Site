@@ -1,7 +1,7 @@
 import heroPortrait from "../../packages/images/AdMaker_13042023_183626.png";
 import aboutPortrait from "../../packages/images/pras-2.png";
 import eLearningImage from "../../packages/images/E-Learning Management System.png";
-import qurtubiksMobileImage from "../../packages/images/Mobile App - Qurtubiks.png";
+import qurtubiksMobileImage from "../../packages/images/Mobile App - Qurtubiks.jpeg";
 import kaixenflowImage from "../../packages/images/Kaixenflow.png";
 import digitalShoppingCentreImage from "../../packages/images/Digital Shopping Centre.png";
 import maidportImage from "../../packages/images/Maidport.png";
@@ -11,8 +11,10 @@ import qoaOpenDayImage from "../../packages/images/QOA Open Day App 2023.png";
 import articleOneImage from "../../packages/images/article-1.png";
 import articleTwoImage from "../../packages/images/article-2.png";
 import articleThreeImage from "../../packages/images/article-3.png";
+import articleFourImage from "../../packages/images/article-4.webp";
 import arunImage from "../../packages/images/arun.jpg";
 import yugaImage from "../../packages/images/yuga.jpg";
+import kaixenNalediImage from "../../packages/images/naledikaixenflow.jpg";
 import shenanImage from "../../packages/images/shenan.png";
 import ritoImage from "../../packages/images/Rito.jpeg";
 import cvPdf from "../../Brochure-Jabu-Kekana.pdf?url";
@@ -35,19 +37,36 @@ export const contact = {
 
 export const projects = [
   {
-    title: "E-Learning Management System",
-    stack: "Full-Stack Development > Responsive UI > Backend APIs > Database Workflows",
-    image: eLearningImage,
-    description:
-      'I served as an in-house Full-Stack Developer for an online learning platform, working within a global team environment. My role involved bridging the gap between complex designs and functional features, building responsive web interfaces while developing the backend services and APIs that powered them. I managed database interactions and worked within a professional "feature-branching" workflow, ensuring that every update was stable, tested, and ready for thousands of students to use.',
-    link: "https://auth.qurtubiks.com/",
-  },
-  {
     title: "Mobile App - Qurtubiks",
-    stack: "Mobile App Development > iOS > Android > Cross-Platform Data Sync",
+    stack: "React Native 0.81 > Expo SDK 54 > TypeScript > Auth0 > PayFast > AWS",
     image: qurtubiksMobileImage,
     description:
-      "I developed a cross-platform mobile application to bring the Qurtubiks experience to iOS and Android devices. My main focus was ensuring that the mobile app felt as smooth and intuitive as the web version. I carefully integrated the mobile frontend with the existing databases and backend services to ensure that all academic data stayed perfectly synced across all devices. This project highlighted my skills in building unified experiences across different platforms.",
+      "Architected and deployed the official production mobile app single-handedly across iOS, Android, and Huawei AppGallery. Built with React Native's New Architecture and Expo SDK 54, the app features native Apple & Google OAuth with PKCE, PayFast tuition and wallet payments, dynamic PDF report rendering, and multi-provider push notifications (APNs, FCM, Huawei Push Kit) for thousands of active parents.",
+    storeLinks: [
+      {
+        store: "apple",
+        label: "Download Qurtubiks from the Apple App Store",
+        url: "https://apps.apple.com/us/app/qurtubiks/id6794163835",
+      },
+      {
+        store: "google-play",
+        label: "Download Qurtubiks from Google Play",
+        url: "https://play.google.com/store/apps/details?id=com.imtiyaazh.qurtubamobile&pcampaignid=web_share",
+      },
+      {
+        store: "huawei",
+        label: "Download Qurtubiks from Huawei AppGallery",
+        url: "https://appgallery.huawei.com/app/C118408983",
+      },
+    ],
+  },
+  {
+    title: "E-Learning Management System",
+    stack: "React > MUI > TypeScript > NestJS > PostgreSQL > AWS (EC2/S3/RDS)",
+    image: eLearningImage,
+    description:
+      "Engineered core features and backend APIs within a production monorepo powering a high-traffic learning platform for 8,000+ active users. Managed PostgreSQL database schemas, optimized complex SQL queries, and executed a seamless cloud migration from DigitalOcean to AWS (EC2, S3, RDS) to eliminate performance bottlenecks and ensure high availability.",
+    link: "https://auth.qurtubiks.com/",
   },
   {
     title: "Kaixenflow",
@@ -120,6 +139,13 @@ export const stories = [
     image: articleThreeImage,
     description: "By Jabu Kekana",
     link: "https://medium.com/@jabukekana59/the-real-toll-of-software-engineering-and-how-to-stay-human-in-a-24-7-industry-4582a5c98276?sharedUserId=jabukekana59",
+  },
+  {
+    title: "Is Learning to Code Still Important in the Age of AI?",
+    stack: "30 August 2026",
+    image: articleFourImage,
+    description: "By Jabu Kekana",
+    link: "https://medium.com/@jabukekana59/is-learning-to-code-still-important-in-the-age-of-ai-843c950cff72?sharedUserId=jabukekana59",
   },
 ];
 
@@ -261,28 +287,35 @@ export const work = [
 
 export const testimonials = [
   {
-    name: "Mkhiva",
-    title: "Entrepreneur",
-    image: arunImage,
-    quote:
-      'We had been searching for a developer who could successfully revamp our website "Qhagamshela" for months without success. Thankfully, a friend recommended Jabu, who improved the website and provided cost-effective solutions.',
-  },
-  {
-    name: "Thato",
-    title: "Actuarial Scientist",
+    name: "Thato Sodi",
+    title: "Actuarial Scientist & Entrepreneur",
     image: yugaImage,
     quote:
       "I reached out to Jabu on LinkedIn after seeing some of his work. He has a client-focused approach that really makes it easier to collaborate with him on any project, and his work is impressive.",
   },
   {
-    name: "Ronald",
-    title: "Full Stack Web Developer",
+    name: "Naledi Malise",
+    title: "physiotherapist & wellness entrepreneur",
+    image: kaixenNalediImage,
+    quote:
+      "Jabu was referred to me by a friend, and I was impressed by his professionalism and dedication. He took the time to understand my business needs and delivered a website that exceeded my expectations.",
+  },
+  {
+    name: "Mkhiva Mkiva",
+    title: "Entrepreneur",
+    image: arunImage,
+    quote:
+      'We had been searching for a developer who could successfully revamp our website as per our design expecations for months without success. Thankfully, a friend recommended Jabu, who improved the website and provided cost-effective solutions.',
+  },
+  {
+    name: "Ronald Ngwenya",
+    title: "Full Stack Software Enginner",
     image: shenanImage,
     quote:
       "I collaborated with Jabu on a business website project. He was responsible for the front end, researched solutions carefully and adjusted the interface to accommodate the back end's needs.",
   },
   {
-    name: "Dr. Shidzinga",
+    name: "Dr. R Shidzinga",
     title: "S-L Pathologist & Audiologist",
     image: ritoImage,
     quote:
